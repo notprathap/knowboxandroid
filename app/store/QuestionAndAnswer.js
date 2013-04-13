@@ -8,7 +8,7 @@ Ext.define('knowledge-wallet.store.QuestionAndAnswer', {
 
         proxy: {
             type: 'jsonp',
-            url: 'http://4jrx.localtunnel.com/users/1/qaitems'
+            url: 'http://59g4.localtunnel.com/qaitems/user/1'
         }
     }
 });
