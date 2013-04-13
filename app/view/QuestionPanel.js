@@ -1,6 +1,5 @@
 Ext.define('knowledge-wallet.view.QuestionPanel', {
 	extend: 'Ext.Panel',
-	xtype: 'qpanelcontainer',
 	config:{
 		question: "",
 		answer: "",
@@ -8,12 +7,18 @@ Ext.define('knowledge-wallet.view.QuestionPanel', {
 	},
 	fullscreen: true,
 	initialize : function(){
-		this.add([{
-			flex: 4,
-			html: this.getQuestion()
-		},{
-			flex: 1,
-			html: this.getAnswer()
-		}]);
+		this.add({
+			xtype: 'container',
+			layout: 'vbox',
+			width: '100%',
+			height: '100%',
+			items: [{
+				flex: 4,
+				html: this.getQuestion()
+			},{
+				flex: 1,
+				html: this.getAnswer()
+			}]
+		});
 	}
 });

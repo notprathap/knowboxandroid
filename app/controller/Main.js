@@ -5,11 +5,9 @@ Ext.define('knowledge-wallet.controller.Main', {
               'knowledge-wallet.view.QuestionPanel'],
 
     launch : function() {
-    	//initialize store - Need to make it JsonP
     	var qastore = Ext.create('knowledge-wallet.store.QuestionAndAnswer');
     	qastore.load();
     	qastore.on('load', function(t) {
-    		console.log(qastore.getData());
     		this.extractData(qastore);
     	}, this, {single: true});
     },
@@ -27,10 +25,6 @@ Ext.define('knowledge-wallet.controller.Main', {
     			qid: item.id
     		});
     		questions.push(qpanelContainer);
-    		
-//    		questions.push({
-//                html: ["Q: "+item.question,
-//                       "<br>A: "+item.answer].join("")});
     	}
     	
     	Ext.getCmp('qapanel').setItems(questions);
