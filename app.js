@@ -60,7 +60,7 @@ Ext.application({
         Ext.fly('appLoadingIndicator').destroy();
         
         // Initialize the main view
-        Ext.Viewport.add(Ext.create('knowledge-wallet.view.Main'));
+        Ext.Viewport.add(Ext.create('knowledge-wallet.view.Main', {id:'qapanel'}));
     },
 
     onUpdated: function() {
