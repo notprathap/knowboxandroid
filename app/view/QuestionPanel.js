@@ -1,16 +1,19 @@
 Ext.define('knowledge-wallet.view.QuestionPanel', {
 	extend: 'Ext.Panel',
 	xtype: 'qpanelcontainer',
-	layout: 'vbox',
+	config:{
+		question: "",
+		answer: "",
+		qid: 0
+	},
 	fullscreen: true,
-	question: "",
-	answer: "",
-	qid: 0,
-	items: [{
-		flex: 4,
-		html: 'xx'
-	},{
-		flex: 1,
-		html: 'ehllo'
-	}]
+	initialize : function(){
+		this.add([{
+			flex: 4,
+			html: this.getQuestion()
+		},{
+			flex: 1,
+			html: this.getAnswer()
+		}]);
+	}
 });
