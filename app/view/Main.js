@@ -6,16 +6,20 @@ Ext.define('knowledge-wallet.view.Main', {
 	    directionLock: true,
 	    items: [
 	        {
-	            html: "First Item"
+	            html: ["Q1<br><br>",
+	                   "Answer1"].join("")
 	        },
 	        {
-	            html: "Second Item"
+	        	html: ["Q2<br><br>",
+	                   "Answer2"].join("")
 	        },
 	        {
-	            html: "Third Item"
+	        	html: ["Q3<br><br>",
+	                   "Answer3"].join("")
 	        },
 	        {
-	            html: "Fourth Item"
+	        	html: ["Q4<br><br>",
+	                   "Answer4"].join("")
 	        }
 	    ]
     }
