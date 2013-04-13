@@ -7,7 +7,8 @@ Ext.define('knowledge-wallet.model.QuestionAndAnswer', {
         fields: [
             { name: 'id',  type: 'number' },
             { name: 'question',      type: 'string' },
-            { name: 'answer',  type: 'string' }
+            { name: 'answer',  type: 'string' },
+            { name: 'url', type: 'string'}
         ]
     }
 });
